@@ -76,4 +76,61 @@
       });
     });
   });
+
+  // --- Category recommender
+  const recAge = document.getElementById('rec-age');
+  const recRating = document.getElementById('rec-rating');
+  const recResult = document.getElementById('rec-result-value');
+  const catCards = document.querySelectorAll('#cat-grid .cat-card');
+
+  // Mapping: [age, rating] -> recommended category letter
+  const REC_TABLE = {
+    'young:':    'F',
+    'young:low': 'F',
+    'young:mid': 'F',
+    'young:high':'F',
+    'young:top': 'F',
+    'mid:':      'D',
+    'mid:low':   'D',
+    'mid:mid':   'C',
+    'mid:high':  'B',
+    'mid:top':   'A',
+    'senior:':   'B',
+    'senior:low':'D',
+    'senior:mid':'C',
+    'senior:high':'B',
+    'senior:top':'A',
+  };
+
+  const CAT_NAMES = { A: 'A · Классика', B: 'B · Рапид старшие', C: 'C · Рапид средние', D: 'D · Рапид младшие', E: 'E · Блиц Open', F: 'F · Grand Baby Chess' };
+
+  function updateRecommender() {
+    if (!recAge || !recResult) return;
+    const age = recAge.value;
+    const rating = recRating ? recRating.value : '';
+
+    if (!age) {
+      recResult.textContent = 'Выберите параметры →';
+      catCards.forEach(c => c.classList.remove('match', 'dim'));
+      return;
+    }
+
+    const key = age + ':' + rating;
+    const cat = REC_TABLE[key] || null;
+
+    if (cat) {
+      recResult.textContent = CAT_NAMES[cat] || cat;
+      catCards.forEach(c => {
+        const isCat = c.dataset.cat === cat;
+        c.classList.toggle('match', isCat);
+        c.classList.toggle('dim', !isCat);
+      });
+    } else {
+      recResult.textContent = 'Выберите параметры →';
+      catCards.forEach(c => c.classList.remove('match', 'dim'));
+    }
+  }
+
+  if (recAge) recAge.addEventListener('change', updateRecommender);
+  if (recRating) recRating.addEventListener('change', updateRecommender);
 })();

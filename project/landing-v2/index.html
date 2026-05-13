@@ -56,6 +56,12 @@
             <a href="#register" class="btn btn-primary">Записать ребёнка <span class="arr">→</span></a>
             <a href="#categories" class="btn-link">Подобрать категорию <span class="arr">→</span></a>
           </div>
+
+          <div class="hero-social">
+            <span class="star"><em>★</em> 4.9</span>
+            <span>от&nbsp;200+ родителей · 2025</span>
+            <div class="hero-scarcity">⚠ Регистрация до&nbsp;22&nbsp;мая · осталось&nbsp;38&nbsp;мест из&nbsp;120</div>
+          </div>
         </div>
 
         <div class="hero-art" aria-hidden="true">
@@ -68,6 +74,36 @@
       <span class="s4"></span><span class="s5"></span><span class="s6"></span>
       <span class="s7"></span><span class="s8"></span><span class="s9"></span>
       <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 2 · СЕГМЕНТЫ -->
+  <section data-screen-label="02 Segments" id="segments">
+    <div class="wrap">
+      <div class="segments-grid">
+
+        <a href="#categories" class="seg-card">
+          <div class="seg-num">01</div>
+          <h3 class="seg-title">Первый рейтинговый турнир</h3>
+          <p class="seg-body">Ребёнок занимается, но турниров с&nbsp;обсчётом ФШР ещё не&nbsp;было? Категория для дебюта.</p>
+          <span class="seg-link">Подобрать категорию</span>
+        </a>
+
+        <a href="#categories" class="seg-card">
+          <div class="seg-num">02</div>
+          <h3 class="seg-title">Уже играет — нужны очки ФШР</h3>
+          <p class="seg-body">У&nbsp;ребёнка есть рейтинг и&nbsp;цель — расти. 7&nbsp;рейтинговых туров за&nbsp;выходные.</p>
+          <span class="seg-link">Выбрать формат</span>
+        </a>
+
+        <a href="#categories" class="seg-card">
+          <div class="seg-num">03</div>
+          <h3 class="seg-title">Серьёзный спорт — призовой фонд</h3>
+          <p class="seg-body">Категории Open и&nbsp;Grand Baby Chess с&nbsp;призовым фондом 100% от&nbsp;взносов.</p>
+          <span class="seg-link">Смотреть призы</span>
+        </a>
+
+      </div>
     </div>
   </section>
 
@@ -87,9 +123,36 @@
         </ul>
       </div>
 
-      <div class="cat-grid">
+      <div class="recommender" id="recommender">
+        <div class="rec-title">Поможем подобрать категорию</div>
+        <div class="field">
+          <label for="rec-age">Возраст ребёнка</label>
+          <select id="rec-age">
+            <option value="">Не выбран</option>
+            <option value="young">До&nbsp;8&nbsp;лет</option>
+            <option value="mid">9–13&nbsp;лет</option>
+            <option value="senior">14–17&nbsp;лет</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="rec-rating">Рейтинг ФШР</label>
+          <select id="rec-rating">
+            <option value="">Без рейтинга</option>
+            <option value="low">до&nbsp;1200</option>
+            <option value="mid">1200–1500</option>
+            <option value="high">1500–1800</option>
+            <option value="top">1800+</option>
+          </select>
+        </div>
+        <div class="rec-result">
+          <span class="rec-result-label">Рекомендуем</span>
+          <span class="rec-result-value" id="rec-result-value">Выберите параметры →</span>
+        </div>
+      </div>
 
-        <a href="#register" class="cat-card">
+      <div class="cat-grid" id="cat-grid">
+
+        <a href="#register" class="cat-card" data-cat="A">
           <div class="cat-thumb"><img src="assets/cat-classic.webp" alt="Классика" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория A</span>
@@ -107,7 +170,7 @@
           </div>
         </a>
 
-        <a href="#register" class="cat-card">
+        <a href="#register" class="cat-card" data-cat="B">
           <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория B</span>
@@ -125,7 +188,7 @@
           </div>
         </a>
 
-        <a href="#register" class="cat-card">
+        <a href="#register" class="cat-card" data-cat="C">
           <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид средние" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория C</span>
@@ -143,7 +206,7 @@
           </div>
         </a>
 
-        <a href="#register" class="cat-card">
+        <a href="#register" class="cat-card" data-cat="D">
           <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид младшие" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория D</span>
@@ -161,7 +224,7 @@
           </div>
         </a>
 
-        <a href="#register" class="cat-card">
+        <a href="#register" class="cat-card" data-cat="E">
           <div class="cat-thumb"><img src="assets/cat-blitz.webp" alt="Блиц" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория E</span>
@@ -179,7 +242,7 @@
           </div>
         </a>
 
-        <a href="#register" class="cat-card">
+        <a href="#register" class="cat-card" data-cat="F">
           <div class="cat-thumb"><img src="assets/cat-grandbaby.webp" alt="Grand Baby Chess" /></div>
           <div class="cat-body">
             <span class="cat-code">Категория F</span>

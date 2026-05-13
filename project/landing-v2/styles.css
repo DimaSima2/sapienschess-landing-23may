@@ -886,15 +886,15 @@ body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9
 }
 .cat-card:hover { border-color: var(--ink); }
 .cat-card.match {
-  border-color: var(--pink);
-  box-shadow: inset 0 0 0 1px var(--pink);
+  border-color: var(--mint);
+  box-shadow: inset 0 0 0 1px var(--mint);
 }
 .cat-card.match::before {
   content: "Подходит";
   position: absolute;
   top: 12px; right: 12px;
-  background: var(--pink);
-  color: #fff;
+  background: var(--mint);
+  color: var(--ink);
   font-family: var(--f-display);
   font-weight: 700;
   font-size: 10px;
@@ -902,6 +902,10 @@ body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9
   text-transform: uppercase;
   padding: 4px 8px;
   z-index: 2;
+}
+.cat-card.dim {
+  opacity: 0.45;
+  pointer-events: none;
 }
 .cat-card .cat-thumb img {
   position: absolute;
@@ -2072,7 +2076,7 @@ body.tweaks-on .tweaks { display: block; }
   text-transform: uppercase;
   cursor: pointer;
   z-index: 99;
-  display: none;
+  display: block;
 }
 body.tweaks-on .tweaks-trigger { display: none; }
 
