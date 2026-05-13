@@ -585,8 +585,8 @@ section:has(> .section-stripe) {
   align-items: center;
   gap: 12px;
   padding: 8px 14px;
-  background: var(--pink);
-  color: #fff;
+  background: var(--mint);
+  color: var(--ink);
   font-family: var(--f-display);
   font-weight: 700;
   font-size: 13px;
