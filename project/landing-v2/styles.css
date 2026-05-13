@@ -648,37 +648,26 @@ body[data-hero="none"] .hero-text { background: transparent; }
 body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9vw, 128px); }
 
 @media (max-width: 900px) {
-  .hero {
-    min-height: 100svh;
-  }
   .hero-chimp {
     position: absolute;
-    right: 0;
-    bottom: 16px;
+    right: -10vw;
+    bottom: 0;
     top: auto;
-    height: 80%;
+    height: 80svh;
     width: auto;
-    max-width: 55vw;
-    max-height: 80svh;
+    max-width: none;
+    max-height: none;
     z-index: 0;
-    opacity: 0.9;
+    opacity: 1;
   }
-  /* gradient shield so text stays readable over chimp */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(to right, #fff 42%, transparent 75%);
-    pointer-events: none;
-  }
+  .hero::before { display: none; }
   .hero-grid {
     grid-template-columns: 1fr;
     padding-top: 24px;
     gap: 16px;
     position: relative;
     z-index: 2;
-    max-width: 65%;
+    max-width: 58%;
   }
   .hero-text { background: transparent; padding: 0; }
   .hero-art { display: none; }
@@ -686,13 +675,10 @@ body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9
 
 @media (max-width: 540px) {
   .hero-chimp {
-    max-width: 60vw;
-    height: 70%;
+    right: -14vw;
+    height: 70svh;
   }
-  .hero::before {
-    background: linear-gradient(to right, #fff 38%, transparent 70%);
-  }
-  .hero-grid { max-width: 70%; }
+  .hero-grid { max-width: 65%; }
 }
 
 /* ============================================================ */
