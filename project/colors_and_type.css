@@ -1,0 +1,311 @@
+/* ============================================================
+   SAPIENSCHESS DESIGN TOKENS
+   colors_and_type.css
+   ============================================================
+   Reconstructed from the partner-program pitch deck. Pinks
+   and teals are best-effort matches against the rasterized
+   PNG — replace with exact Figma values when available.
+   ============================================================ */
+
+/* --- Fonts (Google substitutions, see fonts/README.md) ------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ===== Brand colors ===== */
+  --sc-pink:        #E6097E;   /* "Magenta Sapiens" — primary accent, headlines, calls to action */
+  --sc-pink-dark:   #C2086C;
+  --sc-pink-hover:  #FF1F92;
+  --sc-mint:        #3DD3B4;   /* "Mint Knight" — secondary accent, never used alone for text */
+  --sc-mint-dark:   #28B89A;
+
+  /* Tertiary, derived for charts/illustration. NOT used on the deck — flagged. */
+  --sc-pink-soft:   #FBE0EE;
+  --sc-mint-soft:   #DCF7F0;
+
+  /* ===== Foundation ===== */
+  --sc-black:       #0A0A0A;   /* near-pure black used for text + checker */
+  --sc-ink:         #1A1A1A;   /* heading text */
+  --sc-white:       #FFFFFF;
+  --sc-paper:       #FAFAFA;   /* slide background */
+  --sc-stage:       #E5E5E5;   /* canvas / margin behind slides */
+
+  /* ===== Neutrals ===== */
+  --sc-n-900: #1A1A1A;
+  --sc-n-800: #2C2C2C;
+  --sc-n-700: #4A4A4A;
+  --sc-n-600: #6B6B6B;
+  --sc-n-500: #8C8C8C;   /* "Станьте частью..." subtitle gray */
+  --sc-n-400: #B3B3B3;
+  --sc-n-300: #D1D1D1;   /* checker light squares, divider rules */
+  --sc-n-200: #E5E5E5;
+  --sc-n-100: #F2F2F2;
+  --sc-n-050: #FAFAFA;
+
+  /* ===== Semantic foreground / background ===== */
+  --fg-1: var(--sc-ink);          /* primary text */
+  --fg-2: var(--sc-n-700);        /* body */
+  --fg-3: var(--sc-n-500);        /* muted / supporting */
+  --fg-accent: var(--sc-pink);    /* headlines, eyebrow labels */
+  --fg-on-dark: var(--sc-white);
+  --fg-on-accent: var(--sc-white);
+
+  --bg-1: var(--sc-white);
+  --bg-2: var(--sc-paper);
+  --bg-3: var(--sc-n-100);
+  --bg-stage: var(--sc-stage);
+  --bg-ink: var(--sc-black);
+  --bg-accent: var(--sc-pink);
+
+  --rule: var(--sc-n-300);
+  --rule-strong: var(--sc-n-700);
+
+  /* ===== Status (derived — not in deck, flagged) ===== */
+  --status-success: #2BB673;
+  --status-warning: #F2A900;
+  --status-danger:  #E63946;
+  --status-info:    var(--sc-mint-dark);
+
+  /* ===== Typography ===== */
+  --font-display: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'Roboto Mono', 'SFMono-Regular', Menlo, monospace;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+  --fw-black:   900;
+
+  /* Type scale (presentation-grade — generous) */
+  --t-display-1: 96px;   /* slide hero title */
+  --t-display-2: 72px;   /* section header full-bleed */
+  --t-h1:        56px;   /* slide title */
+  --t-h2:        40px;   /* slide sub-title */
+  --t-h3:        28px;
+  --t-h4:        22px;
+  --t-eyebrow:   18px;   /* pink uppercase label */
+  --t-body-lg:   22px;
+  --t-body:      18px;
+  --t-body-sm:   16px;
+  --t-caption:   13px;
+
+  /* Line heights */
+  --lh-tight:    1.05;
+  --lh-snug:     1.15;
+  --lh-normal:   1.35;
+  --lh-relaxed:  1.55;
+
+  /* Letter-spacing */
+  --ls-tight:    -0.02em;
+  --ls-normal:   0;
+  --ls-wide:     0.04em;   /* uppercase eyebrows */
+  --ls-xwide:    0.08em;   /* SAPIENSCHESS wordmark spacing */
+
+  /* ===== Spacing (8-pt base) ===== */
+  --sp-0:  0;
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* ===== Radii ===== */
+  --r-0: 0;            /* The deck is HARD-EDGED. Default to 0. */
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-pill: 999px;
+
+  /* ===== Shadows (minimal — the brand uses none on slides) ===== */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgba(10,10,10,0.06), 0 1px 1px rgba(10,10,10,0.04);
+  --shadow-2: 0 6px 16px rgba(10,10,10,0.08), 0 2px 4px rgba(10,10,10,0.04);
+  --shadow-pop: 0 12px 32px rgba(230,9,126,0.20);
+
+  /* ===== Motion ===== */
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   320ms;
+
+  /* ===== Checker patterns (hero motif) =====
+     Use as: background: var(--checker-sm); background-size: 24px 24px; */
+  --checker-color: var(--sc-black);
+  --checker-bg:    var(--sc-n-300);
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   Use these via class names so headings stay consistent.
+   ============================================================ */
+
+.sc-display-1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--t-display-1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+.sc-display-2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--t-display-2);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+.sc-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--t-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+.sc-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--t-h2);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--fg-1);
+}
+
+.sc-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--t-h3);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.sc-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--t-h4);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--fg-1);
+}
+
+.sc-eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--t-eyebrow);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+.sc-body-lg {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+
+.sc-body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-body);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+
+.sc-body-bold {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--t-body);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+  text-transform: uppercase;
+}
+
+.sc-caption {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-caption);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-3);
+}
+
+.sc-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-body-sm);
+  color: var(--fg-1);
+}
+
+/* ===== Wordmark =====
+   Used by the SAPIENSCHESS lockup: SAPIENS is heavy, CHESS is regular. */
+.sc-wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-h2);
+  letter-spacing: var(--ls-xwide);
+  color: var(--sc-ink);
+  text-transform: uppercase;
+  display: inline-block;
+}
+.sc-wordmark > b {
+  font-weight: var(--fw-black);
+}
+
+/* ===== Bullet style — the deck uses a solid square ▪ ===== */
+.sc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.sc-list > li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  color: var(--fg-2);
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  line-height: var(--lh-relaxed);
+}
+.sc-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  background: var(--sc-ink);
+}
+
+/* ===== Eyebrow-with-rule (vertical stroke before label) ===== */
+.sc-eyebrow-rule {
+  border-left: 4px solid var(--sc-n-300);
+  padding-left: 16px;
+}
+
+/* ===== Hard-edged Sapiens stripe (decorative footer/header band) ===== */
+.sc-stripe {
+  display: flex;
+  height: 14px;
+  width: 100%;
+  background: var(--sc-n-300);
+}
+.sc-stripe > span {
+  flex: 1;
+  height: 100%;
+}
+.sc-stripe > .pink { background: var(--sc-pink); flex: 0.6; }
+.sc-stripe > .mint { background: var(--sc-mint); flex: 0.6; }

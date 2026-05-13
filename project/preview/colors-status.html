@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+html,body{margin:0;background:#fff;font-family:var(--font-body);color:var(--fg-1);}
+.card{padding:20px 24px;box-sizing:border-box;width:700px;}
+.row{display:flex;gap:12px;align-items:flex-end;}
+.swatch{flex:1;border:1px solid var(--rule);min-height:60px;display:flex;flex-direction:column;justify-content:flex-end;padding:8px;color:#fff;}
+.swatch .name{font-size:12px;font-weight:700;letter-spacing:.04em;}
+.swatch .hex{font-family:var(--font-mono);font-size:11px;opacity:.9;}
+.swatch.lt{color:var(--fg-1);}
+.label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);font-weight:700;margin:0 0 10px;}
+.bullet{position:absolute;left:0;top:7px;width:8px;height:8px;background:#0A0A0A;display:inline-block;}
+li.b{position:relative;padding-left:18px;margin-bottom:6px;list-style:none;}
+ul.b{list-style:none;padding:0;margin:0;}
+</style></head><body><div class="card"><p class="label">Status — derived, flagged ⚠</p><div class="row"><div class="swatch" style="background:#2BB673"><div class="name">SUCCESS</div><div class="hex">#2BB673</div></div><div class="swatch lt" style="background:#F2A900"><div class="name">WARNING</div><div class="hex">#F2A900</div></div><div class="swatch" style="background:#E63946"><div class="name">DANGER</div><div class="hex">#E63946</div></div><div class="swatch" style="background:#28B89A"><div class="name">INFO</div><div class="hex">#28B89A</div></div></div></div></body></html>

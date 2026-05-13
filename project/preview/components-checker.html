@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+html,body{margin:0;background:#fff;font-family:var(--font-body);color:var(--fg-1);}
+.card{padding:20px 24px;box-sizing:border-box;width:700px;}
+.label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);font-weight:700;margin:0 0 10px;}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.tile{aspect-ratio:1;border:1px solid var(--rule);overflow:hidden;position:relative;}
+.cap{font-family:var(--font-mono);font-size:10px;color:var(--fg-3);margin-top:6px;text-align:center;letter-spacing:.04em;text-transform:uppercase;}
+.col{display:flex;flex-direction:column;}
+.wide{grid-column:1 / -1;aspect-ratio:auto;height:64px;}
+
+.p-stripes-v{
+  background:repeating-linear-gradient(90deg,#0A0A0A 0 12px,#C8C8C8 12px 22px);
+}
+.p-check-sm{
+  background-image:
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%),
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%);
+  background-size:14px 14px;
+  background-position:0 0,7px 7px;
+  background-color:#C8C8C8;
+}
+.p-bars-check{
+  position:relative;
+  background:#0A0A0A;
+}
+.p-bars-check::before{
+  content:"";position:absolute;inset:0 0 38% 0;
+  background:repeating-linear-gradient(90deg,#0A0A0A 0 18px,#FFFFFF 18px 36px);
+}
+.p-bars-check::after{
+  content:"";position:absolute;inset:62% 0 0 0;
+  background-image:
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%),
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%);
+  background-size:20px 20px;
+  background-position:0 0,10px 10px;
+  background-color:#FFFFFF;
+}
+.p-strip-horiz{
+  background-image:
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%),
+    linear-gradient(45deg,#0A0A0A 25%,transparent 25%,transparent 75%,#0A0A0A 75%);
+  background-size:20px 20px;
+  background-position:0 0,10px 10px;
+  background-color:#C8C8C8;
+}
+.usage{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+  font-family:var(--font-body);font-size:12px;line-height:1.5;color:var(--fg-2);
+}
+.usage > div{padding:10px 12px;background:var(--bg-3);}
+.usage b{display:block;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-1);margin-bottom:4px;}
+</style></head>
+<body><div class="card">
+<p class="label">Шахматные паттерны — система</p>
+
+<div class="grid">
+  <div class="col"><div class="tile p-stripes-v"></div><div class="cap">Vertical bars</div></div>
+  <div class="col"><div class="tile p-check-sm"></div><div class="cap">Check small</div></div>
+  <div class="col"><div class="tile p-bars-check"></div><div class="cap">Bars + check</div></div>
+  <div class="col"><div class="tile p-check-sm" style="background-size:28px 28px;background-position:0 0,14px 14px;"></div><div class="cap">Check medium</div></div>
+  <div class="col" style="grid-column:1 / -1;"><div class="tile p-strip-horiz wide"></div><div class="cap">Horizontal strip — divider</div></div>
+</div>
+
+<div class="usage">
+  <div><b>Vertical bars</b>Hero / cover side-rails, header accents, page-break ribbons.</div>
+  <div><b>Check small / medium</b>Section background при opacity 6–10%, тач-плашки CTA, иконочные плашки.</div>
+  <div><b>Bars + check</b>Layered композиции: poster, social, переходы между секциями (full-bleed).</div>
+  <div><b>Horizontal strip</b>Делитель между блоками вместо линии. Под ним — тонкий розовый/бирюзовый 2px rule.</div>
+</div>
+</div></body></html>

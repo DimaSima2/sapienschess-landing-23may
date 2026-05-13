@@ -1,0 +1,108 @@
+/* Slide base — 1920x1080 canvas, paper background, brand stripe motif */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg-stage); }
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg-1);
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--fg-1);
+}
+
+/* Page-mounted single-slide preview: scale to viewport */
+.slide-host {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg-stage);
+  overflow: hidden;
+}
+.slide-host .slide {
+  transform: scale(min(calc(100vw / 1920), calc(100vh / 1080)));
+  transform-origin: center;
+}
+
+/* ===== Hard-edged stripe (header / footer band) =====
+   Mimics the irregular pink / mint / gray strip from the deck. */
+.stripe {
+  display: flex;
+  height: 28px;
+  width: 100%;
+  background: var(--sc-n-300);
+}
+.stripe > span { display: block; height: 100%; }
+.stripe .gray  { background: var(--sc-n-300); flex: 1; }
+.stripe .pink  { background: var(--sc-pink);  flex: 0.45; }
+.stripe .mint  { background: var(--sc-mint);  flex: 0.6; }
+.stripe .ink   { background: var(--sc-black); flex: 0.3; }
+
+.stripe-top { position: absolute; top: 0; left: 0; right: 0; }
+.stripe-bot { position: absolute; bottom: 0; left: 0; right: 0; }
+
+/* ===== Page number (bottom-right) ===== */
+.pageno {
+  position: absolute;
+  right: 56px;
+  bottom: 56px;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  color: var(--fg-3);
+}
+
+/* ===== Monogram watermark (bottom-left) ===== */
+.monogram-mark {
+  position: absolute;
+  left: 56px;
+  bottom: 56px;
+  width: 56px;
+  height: 56px;
+}
+
+/* ===== Slide content padding ===== */
+.slide-pad {
+  position: absolute;
+  inset: 80px 80px 110px 80px;
+}
+
+/* ===== Eyebrow + content cluster ===== */
+.cluster .eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sc-ink);
+  margin: 0 0 16px;
+}
+
+/* ===== Standard list (square bullet) ===== */
+.bul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bul > li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--fg-2);
+  font-family: var(--font-body);
+}
+.bul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 12px;
+  height: 12px;
+  background: var(--sc-ink);
+}

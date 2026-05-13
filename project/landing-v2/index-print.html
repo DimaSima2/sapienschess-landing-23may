@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAPIENS CHESS · Турнир 23–24 мая 2026</title>
+  <meta name="description" content="Двухдневный детский шахматный турнир Sapiens Chess в СберСити. Обсчёт ФШР, 8 категорий, призовой фонд 100%." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ============================================================
+       PRINT STYLES — Save-as-PDF presentation
+       ============================================================ */
+    @page {
+      size: A3 portrait;
+      margin: 0.7cm;
+    }
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      html, body { background: #fff !important; }
+      .site-header,
+      .tweaks,
+      .tweaks-trigger,
+      .stripe,
+      .top-ribbon { display: none !important; }
+      .hero {
+        min-height: auto !important;
+        padding: 24px 0 !important;
+        page-break-after: always;
+        break-after: page;
+      }
+      .hero > .wrap { display: block !important; padding: 0 !important; }
+      .hero-grid { padding-top: 0 !important; gap: 24px !important; }
+      .hero-chimp {
+        position: relative !important;
+        right: auto !important; bottom: auto !important;
+        height: 60vh !important; max-height: 60vh !important;
+        max-width: 100% !important;
+        margin-left: auto;
+        display: block;
+      }
+      .hero-art { display: none !important; }
+      .hero-text { padding: 0 !important; }
+      section {
+        page-break-before: always;
+        break-before: page;
+        padding: 24px 0 !important;
+      }
+      .hero,
+      section:first-of-type { page-break-before: avoid; break-before: avoid; }
+      .cat-card { min-height: auto !important; }
+      .cat-card .cat-thumb { aspect-ratio: 4 / 3 !important; flex: 0 0 auto !important; min-height: 240px !important; }
+      .schedule-photos .ph,
+      .gallery .g,
+      .review-card,
+      .seg-card,
+      .infra-card,
+      .team-card,
+      .cat-card,
+      .day-block,
+      .partner-slot,
+      .info-card { break-inside: avoid; }
+      details.faq-item { break-inside: avoid; }
+      details.faq-item .answer { display: block !important; padding-bottom: 16px !important; }
+      details.faq-item .icon { display: none !important; }
+      .site-footer { page-break-before: always; break-before: page; }
+      .schedule-photos .ph img,
+      .gallery .g img,
+      .team-card .photo img { filter: none !important; }
+    }
+  </style>
+</head>
+<body data-mood="pink" data-density="comfortable" data-hero="right" data-checker="on">
+
+  <!-- HEADER -->
+  <header class="site-header" data-screen-label="Header">
+    <div class="wrap">
+      <a href="#" class="brand" aria-label="SapiensChess">
+        <span class="wordmark"><b>SAPIENS</b>CHESS</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="#categories">Категории</a></li>
+          <li><a href="#schedule">Программа</a></li>
+          <li><a href="#location">Локация</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a href="#register" class="btn btn-primary">Записать <span class="arr">→</span></a>
+    </div>
+  </header>
+
+  <!-- BLOCK 1 · HERO -->
+  <section class="hero" data-screen-label="01 Hero" id="hero">
+    <div class="top-ribbon">
+      <div class="stripe top-stripe-bar" aria-hidden="true">
+        <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+        <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+        <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+        <span class="s10"></span>
+      </div>
+    </div>
+    <img class="hero-chimp" src="assets/chimp-hero.png" alt="Шимпанзе Сапи с шахматной фигурой" />
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow eyebrow-rule hero-eyebrow">Детский шахматный турнир</span>
+          <h1 class="hero-wordmark"><b>SAPIENS</b>CHESS<span class="accent-line"> 2026</span></h1>
+          <p class="tagline">Турнир для тех, кто думает на два хода вперёд.</p>
+
+          <div class="hero-meta tabular">
+            <div><span class="label">Когда</span><span>23–24 мая</span></div>
+            <div><span class="label">Где</span><span>Москва, СберСити</span></div>
+            <div><span class="label">Рейтинг</span><span>Обсчёт ФШР</span></div>
+          </div>
+
+          <div class="hero-cta-row">
+            <a href="#register" class="btn btn-primary">Записать ребёнка <span class="arr">→</span></a>
+            <a href="#categories" class="btn-link">Подобрать категорию <span class="arr">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <!-- chimp moved to absolute bg on .hero -->
+        </div>
+      </div>
+    </div>
+    <div class="stripe hero-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 3 · КАТЕГОРИИ -->
+  <section class="tint" data-screen-label="03 Categories" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule">Категории · 6 турниров</span>
+          <h2 class="h2-wide">Подобрать формат<br/>участия</h2>
+        </div>
+        <ul class="head-aside head-aside-list sc-list">
+          <li>Обсчёт ФШР</li>
+          <li>Трансляция партий</li>
+          <li>Подарки всем участникам</li>
+          <li>Фото-отчёт с&nbsp;турнира</li>
+        </ul>
+      </div>
+
+      <div class="cat-grid">
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-classic.webp" alt="Классика" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория A</span>
+            <h3 class="cat-name">Классика<br/>До 1800</h3>
+            <ul class="cat-specs">
+              <li>Рейтинг ФШР до 1800</li>
+              <li>7 туров · 30′+30″</li>
+              <li>Суббота · 11:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">4&nbsp;000&nbsp;₽<small> взнос</small></span>
+              <span class="seats fine">12 мест</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория B</span>
+            <h3 class="cat-name">Рапид<br/>Старшие</h3>
+            <ul class="cat-specs">
+              <li>14–17 лет · рейтинг 1500+</li>
+              <li>7 туров · 15′+10″</li>
+              <li>Суббота · 12:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">3&nbsp;500&nbsp;₽<small> взнос</small></span>
+              <span class="seats low">5 мест</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид средние" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория C</span>
+            <h3 class="cat-name">Рапид<br/>Средние</h3>
+            <ul class="cat-specs">
+              <li>9–13 лет · 1200–1500</li>
+              <li>7 туров · 15′+10″</li>
+              <li>Воскресенье · 11:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">3&nbsp;000&nbsp;₽<small> взнос</small></span>
+              <span class="seats fine">8 мест</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-rapid.webp" alt="Рапид младшие" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория D</span>
+            <h3 class="cat-name">Рапид<br/>Младшие</h3>
+            <ul class="cat-specs">
+              <li>6–9 лет · без рейтинга</li>
+              <li>5 туров · 15′+5″</li>
+              <li>Воскресенье · 12:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">2&nbsp;500&nbsp;₽<small> взнос</small></span>
+              <span class="seats fine">15 мест</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-blitz.webp" alt="Блиц" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория E</span>
+            <h3 class="cat-name">Блиц<br/>Open</h3>
+            <ul class="cat-specs">
+              <li>Любой возраст и&nbsp;рейтинг</li>
+              <li>9 туров · 3′+2″</li>
+              <li>Воскресенье · 16:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">2&nbsp;500&nbsp;₽<small> взнос</small></span>
+              <span class="seats fine">20 мест</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+        <a href="#register" class="cat-card">
+          <div class="cat-thumb"><img src="assets/cat-grandbaby.webp" alt="Grand Baby Chess" /></div>
+          <div class="cat-body">
+            <span class="cat-code">Категория F</span>
+            <h3 class="cat-name">Grand<br/>Baby Chess</h3>
+            <ul class="cat-specs">
+              <li>До 8 лет · рапид</li>
+              <li>5 туров · 10′+5″</li>
+              <li>Суббота · 14:00</li>
+            </ul>
+            <div class="cat-foot">
+              <span class="cat-price">2&nbsp;800&nbsp;₽<small> взнос</small></span>
+              <span class="seats low">3 места</span>
+            </div>
+            <span class="cat-cta">Записать <span class="arr">→</span></span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="rating-cta">
+        <div class="rating-cta-text">
+          <span class="eyebrow eyebrow-rule">Рейтинг ФШР</span>
+          <h3>Не знаете рейтинг ребёнка?</h3>
+          <p>Проверьте текущий рейтинг и&nbsp;ФШР&nbsp;ID в&nbsp;официальной базе Федерации шахмат России.</p>
+        </div>
+        <a href="https://ratings.ruchess.ru/" target="_blank" rel="noopener" class="btn btn-primary rating-cta-btn">
+          Узнать рейтинг ФШР <span class="arr">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 4 · РАСПИСАНИЕ -->
+  <section data-screen-label="04 Schedule" id="schedule">
+    <div class="wrap">
+      <div class="section-head section-head-wide">
+        <div>
+          <span class="eyebrow eyebrow-rule">Расписание</span>
+          <h2>Два дня турнира</h2>
+        </div>
+      </div>
+
+      <div class="schedule-layout">
+        <div class="day-block day-23">
+          <div class="day-head">
+            <span class="day-date">23</span>
+            <span class="day-month">мая 2026</span>
+            <span class="day-weekday">Суббота</span>
+          </div>
+          <ol class="timeline tabular">
+            <li><span class="t-time">11:00–11:45</span><span class="t-event"><b>Регистрация</b> · приём участников, проверка ФШР ID</span></li>
+            <li><span class="t-time">12:00</span><span class="t-event"><b>Старт</b> · жеребьёвка и 1-й тур</span></li>
+            <li><span class="t-time">13:30</span><span class="t-event">Обед для участников</span></li>
+            <li><span class="t-time">14:30–16:00</span><span class="t-event">Туры 2–4</span></li>
+            <li><span class="t-time">16:30</span><span class="t-event"><b>Завершение дня</b> · итоги, фото</span></li>
+          </ol>
+        </div>
+
+        <div class="day-block day-24">
+          <div class="day-head">
+            <span class="day-date">24</span>
+            <span class="day-month">мая 2026</span>
+            <span class="day-weekday">Воскресенье</span>
+          </div>
+          <ol class="timeline tabular">
+            <li><span class="t-time">10:30</span><span class="t-event">Сбор и разминка</span></li>
+            <li><span class="t-time">11:00–15:30</span><span class="t-event">Туры 5–7 · перерывы по 15 мин.</span></li>
+            <li><span class="t-time">~16:00</span><span class="t-event"><b>Награждение</b> · кубки, медали, дипломы</span></li>
+            <li><span class="t-time">16:30</span><span class="t-event"><b>Afterparty в РиверСпейс</b> · чай из самовара на берегу</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="schedule-photos">
+        <div class="ph"><img src="assets/cat-classic.webp" alt="Партия"/><span class="ph-caption">Партия</span></div>
+        <div class="ph"><img src="assets/cat-rapid.webp" alt="Зал"/><span class="ph-caption">Зал турнира</span></div>
+        <div class="ph"><img src="assets/cat-blitz.webp" alt="Блиц"/><span class="ph-caption">Блиц</span></div>
+        <div class="ph"><img src="assets/cat-grandbaby.webp" alt="Grand Baby"/><span class="ph-caption">Grand Baby</span></div>
+        <div class="ph"><img src="assets/chimp-hero.webp" alt="Атмосфера"/><span class="ph-caption">Атмосфера</span></div>
+        <div class="ph"><img src="assets/chimp-thinking.webp" alt="Награждение"/><span class="ph-caption">Награждение</span></div>
+      </div>
+
+      <div class="schedule-note">
+        <div class="mark-icon">!</div>
+        <p>Между турами — перерывы 10–15 минут. Если опаздываете на регистрацию — предупредите по телефону, иначе участник не попадает в жеребьёвку 1-го тура.</p>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 5 · ЛОКАЦИЯ -->
+  <section class="tint" data-screen-label="05 Location" id="location">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule">Локация</span>
+          <h2>Где играем</h2>
+        </div>
+        <p class="head-aside">Просторный зал в СберСити, веранда на набережной для родителей, в 3 минутах от метро Мякинино.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="loc-hero">
+          <img src="assets/map-topview.png" alt="Карта СберСити — вид сверху, расположение площадки турнира" class="loc-map-img" />
+          <div class="map-pin" aria-hidden="true"><div class="pin"></div></div>
+          <div class="loc-photo-caption">СберСити · вид сверху</div>
+        </div>
+
+        <div class="loc-info">
+          <h3>СберСити, Москва</h3>
+          <p class="addr">Мякининское шоссе, вл. 1, корпус 21 · конференц-зал «Платформа», 2-й этаж</p>
+
+          <a href="https://yandex.ru/maps/?text=СберСити" target="_blank" rel="noopener" class="map-btn">
+            Открыть в Яндекс.Картах <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="transit">
+            <div class="row"><b>Метро</b><span>Мякинино · 8 мин. пешком</span></div>
+            <div class="row"><b>Авто</b><span>Парковка White Square · 100 ₽/ч</span></div>
+            <div class="row"><b>Такси</b><span>Точка высадки — главный вход</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="infra-grid">
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <path d="M12 2 L20 6 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V6 Z"></path>
+            <path d="M9 12 L11 14 L15 10"></path>
+          </svg>
+          <div class="infra-title">Безопасность</div>
+          <p class="infra-body">Волонтёры в зале и коридорах между турами.</p>
+        </div>
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <path d="M4 4 V14 C4 16 5 17 7 17 V22"></path>
+            <path d="M9 4 V11"></path>
+            <path d="M14 4 V14 C14 16 15 17 17 17 V22"></path>
+            <path d="M19 4 V14"></path>
+          </svg>
+          <div class="infra-title">Питание</div>
+          <p class="infra-body">Горячий обед в день турнира, вода и фрукты.</p>
+        </div>
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <path d="M2 10 C7 5 17 5 22 10"></path>
+            <path d="M5 13 C9 9 15 9 19 13"></path>
+            <path d="M8 16 C10 14 14 14 16 16"></path>
+            <circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+          <div class="infra-title">Зона родителей</div>
+          <p class="infra-body">Wi-Fi, кофе-станция, трансляция партий.</p>
+        </div>
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <path d="M12 21 C7 17 3 13 3 9 C3 6 5 4 8 4 C10 4 11 5 12 7 C13 5 14 4 16 4 C19 4 21 6 21 9 C21 13 17 17 12 21 Z"></path>
+          </svg>
+          <div class="infra-title">Медпункт</div>
+          <p class="infra-body">Дежурный врач на площадке оба дня.</p>
+        </div>
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <path d="M3 17 V12 L5 7 H19 L21 12 V17"></path>
+            <path d="M3 17 V20 H6 V17"></path>
+            <path d="M18 17 V20 H21 V17"></path>
+            <circle cx="7" cy="17" r="1.5" fill="currentColor"/>
+            <circle cx="17" cy="17" r="1.5" fill="currentColor"/>
+          </svg>
+          <div class="infra-title">Парковка</div>
+          <p class="infra-body">White Square, 100 ₽/ч, валидация для участников.</p>
+        </div>
+        <div class="infra-card">
+          <svg class="infra-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square">
+            <rect x="5" y="3" width="14" height="14"></rect>
+            <path d="M5 12 H19"></path>
+            <path d="M9 17 L7 21"></path>
+            <path d="M15 17 L17 21"></path>
+            <circle cx="9" cy="15" r="0.6" fill="currentColor"/>
+            <circle cx="15" cy="15" r="0.6" fill="currentColor"/>
+          </svg>
+          <div class="infra-title">Метро</div>
+          <p class="infra-body">Мякинино · Арбатско-Покровская, 8 минут пешком.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 6 · КОМАНДА -->
+  <section data-screen-label="06 Team" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule">Команда</span>
+          <h2>Команда турнира</h2>
+        </div>
+        <p class="head-aside">200+ событий за 5 лет. Сертифицированные арбитры ФШР, координатор по детям, дежурный врач.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="photo placeholder" data-label="Директор"></div>
+          <div class="role">Директор турнира</div>
+          <div class="name">Иван Бут</div>
+          <p class="bio">КМС по шахматам · 200+ событий в организации · основатель SapiensChess.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="photo placeholder" data-label="Гл. арбитр">
+            <span class="role-flag accent">ФИДЕ</span>
+          </div>
+          <div class="role">Главный арбитр</div>
+          <div class="name">Имя · до 20 мая</div>
+          <p class="bio">Класс ФИДЕ. Имя публикуем после согласования с квалификационной комиссией.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="photo placeholder" data-label="Координатор"></div>
+          <div class="role">Координатор по детям</div>
+          <div class="name">Наталья Смирнова</div>
+          <p class="bio">Педагог-психолог. Сопровождает участников между турами, отвечает на вопросы родителей.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="photo placeholder" data-label="Судейская"></div>
+          <div class="role">Судейская коллегия</div>
+          <div class="name">4 арбитра</div>
+          <p class="bio">По одному арбитру на две категории. Все — с опытом детских рейтинговых турниров.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 7 · ОТЗЫВЫ + ФОТО -->
+  <section class="reviews" data-screen-label="07 Reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule">Отзывы родителей</span>
+          <h2>Что говорят те, кто уже играл</h2>
+        </div>
+        <p class="head-aside">200+ участников в 2025 году. Три типичных истории — каждая о том, ради чего ехать.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <span class="quote-mark">«</span>
+          <p class="quote-text">Сыну 9, играл первый рейтинговый. Боялись, что не выдержит — а он не хотел уходить после награждения. Спасибо за атмосферу.</p>
+          <div class="reviewer">
+            <div class="avatar">М</div>
+            <div>
+              <div class="who">Мария, мама Тимофея</div>
+              <div class="meta">Категория F · 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="quote-mark">«</span>
+          <p class="quote-text">Прозрачный обсчёт ФШР, чёткое расписание, ребёнок получил +37 к рейтингу за выходные. На следующий едем заранее.</p>
+          <div class="reviewer">
+            <div class="avatar">А</div>
+            <div>
+              <div class="who">Алексей, отец Дани</div>
+              <div class="meta">Категория C · 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="quote-mark">«</span>
+          <p class="quote-text">Понравилось, что есть зона для родителей с кофе и трансляцией. Я не шахматистка, но было видно, что происходит за столом дочки.</p>
+          <div class="reviewer">
+            <div class="avatar">Е</div>
+            <div>
+              <div class="who">Елена, мама Софии</div>
+              <div class="meta">Категория D · 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="g"><img src="assets/cat-classic.webp" alt="Партия"/><span class="label">Партия</span></div>
+        <div class="g"><img src="assets/cat-rapid.webp" alt="Зал"/><span class="label">Зал турнира</span></div>
+        <div class="g"><img src="assets/cat-blitz.webp" alt="Блиц"/><span class="label">Блиц</span></div>
+        <div class="g"><img src="assets/cat-grandbaby.webp" alt="Grand Baby"/><span class="label">Grand Baby</span></div>
+        <div class="g"><img src="assets/chimp-hero.webp" alt="Атмосфера"/><span class="label">Атмосфера</span></div>
+        <div class="g"><img src="assets/chimp-thinking.webp" alt="Сапи"/><span class="label">Сапи</span></div>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 7.5 · ПАРТНЁРЫ -->
+  <section class="partners" data-screen-label="07b Partners" id="partners">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule">Партнёры</span>
+          <h2>Кто с&nbsp;нами</h2>
+        </div>
+        <p class="head-aside">Турнир проводится при поддержке Федерации шахмат, СберСити и&nbsp;партнёров в&nbsp;области детского спорта и&nbsp;интеллектуального досуга.</p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-slot"><span class="partner-label">ФШР</span><span class="partner-hint">Логотип партнёра</span></div>
+        <div class="partner-slot"><span class="partner-label">СберСити</span><span class="partner-hint">Логотип партнёра</span></div>
+        <div class="partner-slot"><span class="partner-label">РиверСпейс</span><span class="partner-hint">Логотип партнёра</span></div>
+        <div class="partner-slot"><span class="partner-label">White Square</span><span class="partner-hint">Логотип партнёра</span></div>
+        <div class="partner-slot"><span class="partner-label">Партнёр 5</span><span class="partner-hint">Логотип партнёра</span></div>
+        <div class="partner-slot"><span class="partner-label">Партнёр 6</span><span class="partner-hint">Логотип партнёра</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK 8 · FAQ -->
+  <section data-screen-label="08 FAQ" id="faq">
+    <div class="wrap">
+      <div class="faq">
+        <div class="faq-aside">
+          <span class="eyebrow eyebrow-rule">Частые вопросы</span>
+          <h2>Что нужно знать перед регистрацией</h2>
+          <p>Не нашли ответа? Напишите в Telegram <a href="https://t.me/sapiens_chess" style="color:var(--ink);text-decoration:underline;">@sapiens_chess</a> или на <a href="mailto:hello@sapienschess.ru" style="color:var(--ink);text-decoration:underline;">hello@sapienschess.ru</a>.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Что взять ребёнку с собой? <span class="icon">+</span></summary>
+            <div class="answer"><p>Ручку, бутылку воды, шахматные часы (если есть свои — не обязательно, выдадим). Можно взять перекус, но горячий обед включён в стоимость.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли участвовать без рейтинга ФШР? <span class="icon">+</span></summary>
+            <div class="answer"><p>Да. Категории D, E, F и H открыты для участников без рейтинга. После первого турнира с обсчётом ФШР рейтинг будет присвоен.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Что входит в стоимость? <span class="icon">+</span></summary>
+            <div class="answer"><p>Обсчёт ФШР, обед в день турнира, призовой фонд (100% от взносов), профессиональное судейство, фото-отчёт, доступ к afterparty в РиверСпейс.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Условия возврата? <span class="icon">+</span></summary>
+            <div class="answer"><p>100% до 20 мая, 50% до 22 мая. После — только по справке в день турнира (болезнь, форс-мажор).</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли родителю присутствовать в зале? <span class="icon">+</span></summary>
+            <div class="answer"><p>В зоне родителей — да, без ограничений. В игровом зале — только во время разминки и технических перерывов, по правилам ФШР.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Как происходит награждение? <span class="icon">+</span></summary>
+            <div class="answer"><p>В каждой категории — кубки за 1–3 места, медали за 4–6, дипломы всем участникам. Денежный призовой фонд — только в Open и Grand Baby Chess.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Есть ли скидки? <span class="icon">+</span></summary>
+            <div class="answer"><p>Early bird — 10% до 15 мая по промокоду EARLY. Второй ребёнок из одной семьи — 15%. Командное участие — цена за команду уже со скидкой.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Что делать, если ребёнок устал и не хочет играть дальше? <span class="icon">+</span></summary>
+            <div class="answer"><p>Можно сняться с турнира между турами — координатор по детям поможет оформить. На уже сыгранные туры рейтинг и призы сохраняются.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <div class="stripe section-stripe" aria-hidden="true">
+      <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+      <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+      <span class="s10"></span>
+    </div>
+  </section>
+
+  <!-- BLOCK 9 · ФОРМА -->
+  <section class="register" data-screen-label="09 Register" id="register">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow eyebrow-rule" style="color:var(--mint)">Запись · 3 шага</span>
+          <h2 class="h2-wide">Запишите ребёнка<br/>на&nbsp;турнир</h2>
+        </div>
+        <p class="head-aside">Заполнение ~3 минуты. Оплата через ЮKassa: СБП, карты, Apple/Google Pay. Подтверждение — в Telegram и на email.</p>
+      </div>
+
+      <div class="form-shell">
+
+        <aside class="form-side-info">
+          <div class="info-card guarantee">
+            <h4>Гарантия возврата</h4>
+            <p>100% до 20 мая, 50% до 22 мая. После — по справке в день турнира.</p>
+          </div>
+          <div class="info-card">
+            <h4>Что включено</h4>
+            <p>Обсчёт ФШР · обед · призовой фонд 100% · фото-отчёт · afterparty в РиверСпейс.</p>
+          </div>
+          <div class="info-card">
+            <h4>Связь с организаторами</h4>
+            <p>Telegram <a href="https://t.me/sapiens_chess" style="color:var(--mint);">@sapiens_chess</a><br/>+7 (985) 123-45-67<br/>hello@sapienschess.ru</p>
+          </div>
+        </aside>
+
+        <div class="form-box">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-step active" data-step="1">
+              <span class="step-n">Шаг 1 / 3</span>
+              <span class="step-label">Ребёнок</span>
+            </div>
+            <div class="progress-step" data-step="2">
+              <span class="step-n">Шаг 2 / 3</span>
+              <span class="step-label">Родитель</span>
+            </div>
+            <div class="progress-step" data-step="3">
+              <span class="step-n">Шаг 3 / 3</span>
+              <span class="step-label">Оплата</span>
+            </div>
+          </div>
+          <div class="progress-fill" id="progress-fill"></div>
+
+          <form class="form-body" id="register-form" onsubmit="return false;">
+
+            <div class="form-step active" data-step="1">
+              <div class="field">
+                <label for="child-name">ФИО участника <span class="req">*</span></label>
+                <input id="child-name" type="text" placeholder="Иванов Иван Петрович" />
+                <div class="err-msg">⚠ Поле обязательно для заполнения</div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="child-birth">Дата рождения <span class="req">*</span></label>
+                  <input id="child-birth" type="date" />
+                </div>
+                <div class="field">
+                  <label for="child-rating">ФШР ID <span class="opt">если есть</span></label>
+                  <input id="child-rating" type="text" placeholder="MS-12345" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="child-cat">Категория <span class="req">*</span></label>
+                <select id="child-cat">
+                  <option>Выберите категорию</option>
+                  <option>A · Классика до 1800</option>
+                  <option>B · Рапид старшие</option>
+                  <option selected>C · Рапид средние</option>
+                  <option>D · Рапид младшие</option>
+                  <option>E · Блиц Open</option>
+                  <option>F · Grand Baby Chess</option>
+                </select>
+                <div class="helper">Категория подобрана по рекомендатору в блоке «Категории».</div>
+              </div>
+              <div class="field">
+                <label for="child-coach">Тренер / школа <span class="opt">не обязательно</span></label>
+                <input id="child-coach" type="text" placeholder="Школа №42 · тренер А. Иванова" />
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn-primary" data-go="2">Далее <span class="arr">→</span></button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <div class="field">
+                <label for="parent-name">ФИО родителя <span class="req">*</span></label>
+                <input id="parent-name" type="text" placeholder="Иванов Пётр Сергеевич" />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="parent-phone">Телефон <span class="req">*</span></label>
+                  <input id="parent-phone" type="tel" placeholder="+7 999 123-45-67" />
+                </div>
+                <div class="field">
+                  <label for="parent-email">Email <span class="req">*</span></label>
+                  <input id="parent-email" type="email" placeholder="ivanov@example.com" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="parent-tg">Telegram <span class="opt">не обязательно</span></label>
+                <input id="parent-tg" type="text" placeholder="@ivanov" />
+              </div>
+              <div class="field">
+                <label>Удобный канал связи</label>
+                <div class="radio-group">
+                  <label class="radio-pill selected"><input type="radio" name="channel" checked /> Telegram</label>
+                  <label class="radio-pill"><input type="radio" name="channel" /> Телефон</label>
+                  <label class="radio-pill"><input type="radio" name="channel" /> Email</label>
+                  <label class="radio-pill"><input type="radio" name="channel" /> WhatsApp</label>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn-ghost" data-go="1">← Назад</button>
+                <button type="button" class="btn btn-primary" data-go="3">Далее <span class="arr">→</span></button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <h4 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:12px;">Проверьте данные</h4>
+              <div class="summary-rows">
+                <div class="summary-row"><span class="k">Участник</span><span class="v">Иванов Иван · 15.05.2014</span><a href="#" class="edit" data-go="1">Изменить</a></div>
+                <div class="summary-row"><span class="k">Категория</span><span class="v">C · Рапид средние</span><a href="#" class="edit" data-go="1">Изменить</a></div>
+                <div class="summary-row"><span class="k">ФШР ID</span><span class="v">MS-12345</span><a href="#" class="edit" data-go="1">Изменить</a></div>
+                <div class="summary-row"><span class="k">Родитель</span><span class="v">Иванов Пётр · +7 999 123-45-67</span><a href="#" class="edit" data-go="2">Изменить</a></div>
+                <div class="summary-row"><span class="k">Связь</span><span class="v">Telegram · @ivanov</span><a href="#" class="edit" data-go="2">Изменить</a></div>
+              </div>
+
+              <div class="field" style="margin-top:24px;">
+                <label for="promo">Промокод <span class="opt">если есть</span></label>
+                <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+                  <input id="promo" type="text" placeholder="EARLY" value="EARLY" />
+                  <button type="button" class="btn btn-ghost" style="min-height:auto; padding:14px 22px;">Применить</button>
+                </div>
+                <div class="helper" style="color:var(--mint-dark);">✓ Промокод EARLY применён · скидка 10%</div>
+              </div>
+
+              <div class="price-breakdown tabular">
+                <div class="row"><span>Категория C · Рапид средние</span><span>3 000 ₽</span></div>
+                <div class="row discount"><span>Промокод EARLY · −10%</span><span>−300 ₽</span></div>
+                <div class="row total"><span>К оплате</span><span>2 700 ₽</span></div>
+              </div>
+
+              <label class="consent">
+                <input type="checkbox" checked />
+                <span>Согласен с <a href="#">обработкой персональных данных</a>, <a href="#">офертой</a> и <a href="#">условиями возврата</a>: 100% до 20 мая, 50% до 22 мая, далее — по справке.</span>
+              </label>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-ghost" data-go="2">← Назад</button>
+                <button type="button" class="btn btn-primary" id="pay-btn">Оплатить 2 700 ₽ <span class="arr">→</span></button>
+              </div>
+              <p class="payment-meta">Оплата защищена ЮKassa · СБП · Карты · Apple/Google Pay</p>
+            </div>
+
+            <div class="thanks" data-step="thanks">
+              <div class="chimp" aria-hidden="true"></div>
+              <span class="check">✓ Оплачено</span>
+              <h3>Увидимся в субботу!</h3>
+              <p class="lede">Подтверждение пришло в Telegram @ivanov и на email ivanov@example.com. До старта — письмо с расписанием и местом жеребьёвки.</p>
+              <div class="next-actions">
+                <a href="https://t.me/sapiens_chess" class="btn btn-primary">Подписаться на канал</a>
+                <a href="#" class="btn btn-ghost">Поделиться с друзьями</a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true">
+    <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+    <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+    <span class="s7"></span><span class="s8"></span><span class="s9"></span>
+    <span class="s10"></span>
+  </div>
+
+  <footer class="site-footer" data-screen-label="Footer">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <div class="slogan">
+            Sapiens Chess —<br/>это про людей,<br/>которых объединяет<br/><span class="accent">интеллект.</span>
+          </div>
+        </div>
+        <div>
+          <h5>Турнир</h5>
+          <ul>
+            <li><a href="#categories">Категории</a></li>
+            <li><a href="#schedule">Программа</a></li>
+            <li><a href="#location">Локация</a></li>
+            <li><a href="#register">Регистрация</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>SapiensChess</h5>
+          <ul>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="https://t.me/sapiens_chess">Telegram-канал</a></li>
+            <li><a href="#">Прошедшие турниры</a></li>
+            <li><a href="#">Партнёрам</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Связь</h5>
+          <ul>
+            <li><a href="mailto:hello@sapienschess.ru">hello@sapienschess.ru</a></li>
+            <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li><a href="#">Оферта</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 SapiensChess · ИП Бут И. М.</span>
+        <span>Сделано в Москве · v2.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="tweaks-trigger" id="tweaks-trigger">⚙ Tweaks</button>
+  <aside class="tweaks" id="tweaks-panel">
+    <button class="tw-close" id="tweaks-close" aria-label="Закрыть">×</button>
+    <h6>Tweaks · Live</h6>
+
+    <div class="tw-group">
+      <div class="tw-label">Настроение</div>
+      <div class="tw-row cols-4">
+        <button data-mood="pink" class="active">Pink</button>
+        <button data-mood="mint">Mint</button>
+        <button data-mood="mono">Mono</button>
+        <button data-mood="bold">Bold</button>
+      </div>
+    </div>
+
+    <div class="tw-group">
+      <div class="tw-label">Hero · композиция</div>
+      <div class="tw-row">
+        <button data-hero="right" class="active">Шимп справа</button>
+        <button data-hero="left">Слева</button>
+        <button data-hero="none">Тип-only</button>
+      </div>
+    </div>
+
+    <div class="tw-group">
+      <div class="tw-label">Плотность</div>
+      <div class="tw-row">
+        <button data-density="compact">Compact</button>
+        <button data-density="comfortable" class="active">Default</button>
+        <button data-density="spacious">Spacious</button>
+      </div>
+    </div>
+
+    <div class="tw-group">
+      <div class="tw-label">Декор</div>
+      <div class="tw-row cols-2">
+        <button data-checker="on" class="active">Шахматка ON</button>
+        <button data-checker="off">OFF</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="tweaks.js"></script>
+  <script>
+    (async () => {
+      try {
+        if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      } catch (e) {}
+      // wait for chimp + category images to load
+      try {
+        const imgs = Array.from(document.images || []);
+        await Promise.all(imgs.map(img => img.complete ? Promise.resolve() : new Promise(res => {
+          img.addEventListener('load', res, { once: true });
+          img.addEventListener('error', res, { once: true });
+        })));
+      } catch (e) {}
+      await new Promise(r => setTimeout(r, 500));
+      window.print();
+    })();
+  </script>
+</body>
+</html>

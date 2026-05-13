@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SapiensChess monogram">
+  <rect x="0" y="0" width="32" height="32" fill="#D1D1D1"></rect>
+  <rect x="32" y="0" width="32" height="32" fill="#D1D1D1"></rect>
+  <rect x="0" y="32" width="32" height="32" fill="#D1D1D1"></rect>
+  <rect x="32" y="32" width="32" height="32" fill="#D1D1D1"></rect>
+  <text x="16" y="24" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-weight="900" font-size="22" fill="#0A0A0A">S</text>
+  <text x="48" y="24" text-anchor="middle" font-family="&#39;Segoe UI Symbol&#39;, &#39;Apple Symbols&#39;, serif" font-size="20" fill="#0A0A0A">♛</text>
+  <text x="16" y="56" text-anchor="middle" font-family="&#39;Segoe UI Symbol&#39;, &#39;Apple Symbols&#39;, serif" font-size="20" fill="#0A0A0A">♚</text>
+  <text x="48" y="56" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-weight="900" font-size="22" fill="#0A0A0A">C</text>
+</svg>

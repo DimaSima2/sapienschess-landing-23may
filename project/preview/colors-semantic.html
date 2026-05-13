@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+html,body{margin:0;background:#fff;font-family:var(--font-body);color:var(--fg-1);}
+.card{padding:20px 24px;box-sizing:border-box;width:700px;}
+.row{display:flex;gap:12px;align-items:flex-end;}
+.swatch{flex:1;border:1px solid var(--rule);min-height:60px;display:flex;flex-direction:column;justify-content:flex-end;padding:8px;color:#fff;}
+.swatch .name{font-size:12px;font-weight:700;letter-spacing:.04em;}
+.swatch .hex{font-family:var(--font-mono);font-size:11px;opacity:.9;}
+.swatch.lt{color:var(--fg-1);}
+.label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3);font-weight:700;margin:0 0 10px;}
+.bullet{position:absolute;left:0;top:7px;width:8px;height:8px;background:#0A0A0A;display:inline-block;}
+li.b{position:relative;padding-left:18px;margin-bottom:6px;list-style:none;}
+ul.b{list-style:none;padding:0;margin:0;}
+</style></head><body><div class="card"><p class="label">Semantic foreground</p><div class="row"><div class="swatch" style="background:#1A1A1A"><div class="name">fg-1</div><div class="hex">primary text</div></div><div class="swatch" style="background:#4A4A4A"><div class="name">fg-2</div><div class="hex">body</div></div><div class="swatch" style="background:#8C8C8C"><div class="name">fg-3</div><div class="hex">muted</div></div><div class="swatch" style="background:#E6097E"><div class="name">fg-accent</div><div class="hex">headlines</div></div></div></div></body></html>
