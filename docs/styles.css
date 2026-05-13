@@ -2062,21 +2062,10 @@ body.tweaks-on .tweaks { display: block; }
   cursor: pointer;
 }
 .tweaks-trigger {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  background: var(--ink);
-  color: #fff;
-  border: 0;
-  padding: 12px 16px;
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  cursor: pointer;
-  z-index: 99;
-  display: block;
+  display: none !important;
+}
+.tweaks {
+  display: none !important;
 }
 body.tweaks-on .tweaks-trigger { display: none; }
 
