@@ -650,10 +650,10 @@ body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9
 @media (max-width: 900px) {
   .hero-chimp {
     position: absolute;
-    right: -20vw;
+    right: -85vw;
     bottom: 0;
     top: auto;
-    width: 55vw;
+    width: 165vw;
     height: auto;
     max-width: none;
     max-height: none;
@@ -674,8 +674,8 @@ body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9
 
 @media (max-width: 540px) {
   .hero-chimp {
-    right: -24vw;
-    width: 60vw;
+    right: -90vw;
+    width: 180vw;
   }
   .hero-grid { max-width: 58%; }
 }
