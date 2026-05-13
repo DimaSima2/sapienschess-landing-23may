@@ -648,18 +648,51 @@ body[data-hero="none"] .hero-text { background: transparent; }
 body[data-hero="none"] .hero-text h1 { max-width: 16ch; font-size: clamp(64px, 9vw, 128px); }
 
 @media (max-width: 900px) {
-  .hero-chimp {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: 360px;
-    top: auto;
-    bottom: auto;
-    object-position: center top;
+  .hero {
+    min-height: 100svh;
   }
-  .hero-grid { grid-template-columns: 1fr; padding-top: 24px; gap: 24px; }
+  .hero-chimp {
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    top: auto;
+    height: 80%;
+    width: auto;
+    max-width: 55vw;
+    max-height: 80svh;
+    z-index: 0;
+    opacity: 0.9;
+  }
+  /* gradient shield so text stays readable over chimp */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right, #fff 42%, transparent 75%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+  }
   .hero-text { background: transparent; padding: 0; }
   .hero-art { display: none; }
+}
+
+@media (max-width: 540px) {
+  .hero-chimp {
+    max-width: 60vw;
+    height: 70%;
+  }
+  .hero::before {
+    background: linear-gradient(to right, #fff 38%, transparent 70%);
+  }
+  .hero-grid { max-width: 70%; }
 }
 
 /* ============================================================ */
